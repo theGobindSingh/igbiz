@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap");
+
+/* font-family: 'Edu SA Beginner', cursive; */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+:root {
+  --pc-screen: 1300px;
+}
+
+.no-pc {
+  display: none;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 1299px) {
+  /* for pc */
+}
+@media only screen and (max-width: 900px) {
+  /* for tablet */
+  .no-tab {
+    display: none;
+    visibility: hidden;
+  }
+  .no-pc {
+    display: unset;
+    visibility: visible;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* for mobile */
+  .no-mob {
+    display: none;
+    visibility: hidden;
+  }
+  .no-pc {
+    display: unset;
+    visibility: visible;
+  }
+}
