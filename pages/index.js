@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { siteName, siteDesc } from "../public/texts";
+import { siteName, siteDesc, homeDesc, homeHead } from "../public/texts";
 
 export default function Home() {
   return (
@@ -9,7 +9,10 @@ export default function Home() {
         <title>{siteName}</title>
         <meta name="description" content={siteDesc} />
       </Head>
-      <div id="main"></div>
+      <main id="home">
+        <h1>{homeHead}</h1>
+        <p>{homeDesc}</p>
+      </main>
     </>
   );
 }

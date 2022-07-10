@@ -1,9 +1,11 @@
 import Head from "next/head";
 
 import "../styles/globals.css";
-import "../styles/HeaderAndFooter.css";
+import "../styles/headerAndFooter.css";
+import "../styles/home.css";
 
 import Header from "../components/Header.jsx";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
