@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { ig_username, email } from "/public/globalVars";
 import { AiFillInstagram } from "react-icons/ai";
@@ -33,41 +33,27 @@ function Header() {
   return (
     <header id="header">
       <div className="img-container">
-        <img src={"/ig.png"} alt="" />
+        <img
+          src={"/igBizWritten.png"}
+          alt=""
+          style={{ filter: "invert(100%)" }}
+        />
       </div>
       <div className="nav-btns">
         <>
           <Link href={"/"}>
             <a className="no-mob ">
-              <button
-                onClick={() => {
-                  navi();
-                }}
-              >
-                Home
-              </button>
+              <button>Home</button>
             </a>
           </Link>
           <Link href={"/categories"}>
             <a className="no-mob ">
-              <button
-                onClick={() => {
-                  navi();
-                }}
-              >
-                Categories
-              </button>
+              <button>Categories</button>
             </a>
           </Link>
           <Link href={"/creators"}>
             <a className="no-mob ">
-              <button
-                onClick={() => {
-                  navi();
-                }}
-              >
-                Creators
-              </button>
+              <button>Creators</button>
             </a>
           </Link>
         </>

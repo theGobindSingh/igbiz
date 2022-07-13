@@ -24,9 +24,10 @@
 }
 
 #header .nav-btns button {
+  color: #ffffff;
   cursor: pointer;
   padding: 9px 12px;
-  border: 1px solid black;
+  border: 1px solid white;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
@@ -95,6 +96,7 @@
   background-color: white;
   box-shadow: 0 0 4px rgb(0, 0, 0), 0 0 3px rgb(100, 100, 100),
     0 0 2px rgb(66, 66, 66);
+  border-radius: 2px;
 }
 #header .burger:hover {
   cursor: pointer;
@@ -123,13 +125,16 @@
   justify-content: center;
   align-items: center;
   /* background-color: blueviolet; */
+  font-family: "Poppins", sans-serif;
+  text-shadow: var(--text-black-2x4-outline);
 }
 
 #footer span {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 #footer .footer-heart-icon {

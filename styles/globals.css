@@ -13,6 +13,9 @@ font-family: 'Edu SA Beginner', cursive; */
   --pc-screen: 1300px;
   --header-height: 15vh;
   --footer-height: 10vh;
+  --page-min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  --text-black-2x4-outline: 0 0 2px black, 0 0 2px black, 0 0 2px black,
+    0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 
 html,
@@ -21,6 +24,60 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+}
+
+body::before {
+  content: "";
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
+}
+
+body {
+  background: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  /* overflow-x: hidden;  */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  border-radius: 10px;
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(50, 50, 50);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(120, 120, 120);
+}
+
+#particles-js {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  position: fixed;
+  margin: 0%;
+  z-index: -1;
 }
 
 a {
@@ -57,6 +114,10 @@ a {
   visibility: hidden;
 }
 
+.MAIN-PAGE {
+  min-height: var(--page-min-height);
+}
+
 @media only screen and (min-width: 1299px) {
   /* for pc */
 }
@@ -80,5 +141,9 @@ a {
   .no-pc {
     display: unset;
     visibility: visible;
+  }
+  #particles-js {
+    visibility: hidden;
+    display: none;
   }
 }
