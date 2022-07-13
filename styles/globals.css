@@ -18,6 +18,11 @@ font-family: 'Edu SA Beginner', cursive; */
     0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 
+#__next {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 html,
 body {
   padding: 0;
@@ -26,8 +31,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
 }
+body {
+  background-color: black !important;
+}
 
-body::before {
+/* body::before {
   content: "";
   background-color: black;
   height: 100vh;
@@ -36,7 +44,7 @@ body::before {
   z-index: -999;
   top: 0;
   left: 0;
-}
+} */
 
 body {
   background: rgba(0, 0, 0, 0);
