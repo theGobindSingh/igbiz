@@ -1,0 +1,33 @@
+#footer {
+  height: $footer-height;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blueviolet; */
+  font-family: "Poppins", sans-serif;
+  text-shadow: $text-black-2x4-outline;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: medium;
+  }
+
+  .footer-heart-icon {
+    margin: 0 5px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #footer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+  }
+}

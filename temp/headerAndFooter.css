@@ -61,7 +61,7 @@
   justify-content: space-evenly;
 }
 #header .nav-active {
-  background-color: rgba(240, 248, 255, 0.95);
+  background-color: rgba(240, 248, 255, 0.4);
   transform: translateX(2%);
   box-shadow: 0 0 100px rgba(0, 0, 0, 1);
   cursor: auto;
@@ -69,6 +69,8 @@
   font-family: "Edu SA Beginner", cursive;
   font-weight: 600;
   font-size: large;
+  /* -webkit-backdrop-filter: blur(2px); */
+  backdrop-filter: blur(10px);
 }
 #header .nav-links li {
   list-style: none;
@@ -121,6 +123,7 @@
 
 #footer {
   height: var(--footer-height);
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,8 +138,20 @@
   align-items: center;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
+  font-size: medium;
 }
 
 #footer .footer-heart-icon {
   margin: 0 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  #footer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+  }
 }

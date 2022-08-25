@@ -1,0 +1,5 @@
+{
+  "key": "ctrl+shift+alt+s",
+  "command": "type",
+  "args": { "text": "Hello World" }
+}

@@ -1,25 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Sacramento&display=swap");
-
-/* font-family: 'Comfortaa', cursive;
-font-family: 'Jost', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Poiret One', cursive;
-font-family: 'Poppins', sans-serif;
-font-family: 'Righteous', cursive;
-font-family: 'Sacramento', cursive; 
-font-family: 'Edu SA Beginner', cursive; */
-
-:root {
-  --pc-screen: 1300px;
-  --header-height: 15vh;
-  --footer-height: 10vh;
-  --page-min-height: calc(100vh - var(--header-height) - var(--footer-height));
-  --text-black-2x4-outline: 0 0 2px black, 0 0 2px black, 0 0 2px black,
-    0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
-}
-
 #__next {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -97,18 +77,19 @@ a {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
+  font-family: "Comfortaa", cursive;
 }
 
 .img-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.img-container img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  position: relative;
+  > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 a {
@@ -123,7 +104,7 @@ a {
 }
 
 .MAIN-PAGE {
-  min-height: var(--page-min-height);
+  min-height: $page-min-height;
 }
 
 @media only screen and (min-width: 1299px) {

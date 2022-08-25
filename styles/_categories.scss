@@ -1,0 +1,106 @@
+#categories {
+  width: 100%;
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 4vw;
+  transition: all 0.3s ease-in-out;
+
+  .main-category-card {
+    height: 20vw;
+    width: 20vw;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+    @include borderRadius;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    text-shadow: $text-black-2x4-outline;
+    isolation: isolate;
+
+    &::before {
+      content: "";
+      background: linear-gradient(black, rgba(0, 0, 0, 0));
+      height: 35%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0), black);
+      height: 35%;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    h2 {
+      margin-top: 5%;
+      width: 95%;
+      font-size: larger;
+    }
+
+    .img-container {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0;
+      z-index: -2;
+    }
+
+    p {
+      margin-bottom: 5%;
+      width: 90%;
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (max-width: $pc-screen) {
+  #categories {
+    padding: 0 7.5vw;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4vw;
+
+    .main-category-card {
+      height: 22.5vw;
+      width: 22.5vw;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-screen) {
+  #categories {
+    padding: 0 5vw;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4vw;
+
+    .main-category-card {
+      height: 40vw;
+      width: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  #categories {
+    padding: 0 5vw;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4vw;
+
+    .main-category-card {
+      height: 40vw;
+      width: 40vw;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ig_username, email } from "/public/globalVars";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
@@ -32,13 +33,18 @@ function Header() {
 
   return (
     <header id="header">
-      <div className="img-container">
-        <img
-          src={"/igBizWritten.png"}
-          alt=""
-          style={{ filter: "invert(100%)" }}
-        />
-      </div>
+      <Link href={"/"}>
+        <a className="img-container">
+          <Image
+            src={"/igBizWritten.png"}
+            alt=""
+            style={{ filter: "invert(100%)" }}
+            priority={true}
+            objectFit="cover"
+            layout="fill"
+          />
+        </a>
+      </Link>
       <div className="nav-btns">
         <>
           <Link href={"/"}>
